@@ -24,13 +24,13 @@ def extract_ipv4_1(string):
 def extract_ipv4_2(string):
     pattern = r"(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"
 
-    match = re.search(pattern, string)
+    match = re.search(pattern, string.replace("\n",""))
     if match:
         return match.group(1)
     else:
         return None
 
-
+#check whether the ip address is already connected
 def is_already_connected(ip):
 
     proc = subprocess.Popen(COMMAND_CONNECTED_DEVICES, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -39,6 +39,7 @@ def is_already_connected(ip):
     ipaddr = extract_ipv4_2(output)
 
     return ipaddr != None and ip == ipaddr
+
 
 
 def main():
@@ -52,6 +53,7 @@ def main():
 
     if is_already_connected(ip=ipaddr):
         print("Android device is already connected via wifi")
+        # run_development_stuff(ip=ipaddr)
     
     else:
 
@@ -66,7 +68,9 @@ def main():
 
         print(o.decode("utf-8"))
 
+        # run_development_stuff(ip=ipaddr)
 
-    
+
+
 main()
 
