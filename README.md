@@ -1,13 +1,13 @@
-#Prepare Android device for wireless testing 📱
+# Prepare Android device for wireless testing 📱
 
 A simple python script to wirelessly configure adb for easier development. 🐍 🔥
 
-##Instructions
+## Instructions
 
 1) Connect mobile device to PC via USB
 2) Run the python script anywhere
 3) Disconnect the USB !
 
-##requirements
+## Requirements
 
  - Python 3
