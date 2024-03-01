@@ -11,3 +11,4 @@ A simple python script to wirelessly configure adb for easier development. 🐍 
 ## Requirements
 
  - Python 3
+ - ADB
