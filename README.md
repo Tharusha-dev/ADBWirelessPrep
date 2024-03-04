@@ -12,3 +12,11 @@ A simple python script to wirelessly configure adb for easier development. 🐍 
 
  - Python 3
  - ADB
+
+## Possible issues
+
+If you get the error
+
+"failed to connect : connection refused"
+
+Just run the script again. You might have to run the script couple of times before you get the a successful connection
