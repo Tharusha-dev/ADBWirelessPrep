@@ -1,0 +1,10 @@
+cryptography
+pyasn1
+rsa
+
+[async]
+aiofiles>=0.4.0
+async_timeout>=3.0.0
+
+[usb]
+libusb1>=1.0.16
